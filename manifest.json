@@ -1,0 +1,45 @@
+{
+    "manifest_version": 3,
+    "name": "Better Douban",
+    "author": "chaojie",
+    "description": "Make douban better !",
+    "version": "1.0",
+    "icons": {
+        "16": "/images/hulk16.png",
+        "32": "/images/hulk32.png",
+        "48": "/images/hulk48.png",
+        "128": "/images/hulk128.png"
+    },
+    "permissions": ["storage", "activeTab", "scripting", "downloads"],
+    "host_permissions": [
+        "https://www.imdb.com/*",
+        "https://bukaivip.com/*",
+        "https://api.assrt.net/*",
+        "https://*.doubanio.com/*"
+    ],
+
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "/images/hulk16.png",
+            "32": "/images/hulk32.png",
+            "48": "/images/hulk48.png",
+            "128": "/images/hulk128.png"
+        }
+    },
+    "content_scripts": [{
+        "matches": ["https://movie.douban.com/subject/*"],
+        "css": ["myStyles.css"],
+        "js": [
+            "/libs/jquery-3.6.0.js",
+            "/libs/utils.js",
+            "contentScript.js"
+        ]
+    }],
+
+
+    "options_page": "/options/options.html"
+}

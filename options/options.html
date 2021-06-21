@@ -1,0 +1,64 @@
+<!-- 选项页 -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/options/options.css">
+</head>
+
+<body>
+  <div class="container mx-auto px-4 py-4 my-4">
+    <h3 class="text-center my-2">Better Douban 设置</h3>
+    <div class="p-4 bg-gray-100">
+      电影选项
+      <div class="block rounded-md my-4 p-4 divide-y bg-white">
+
+        <div class="py-2 flex justify-between">
+          <div>开启字幕下载</div>
+          <div>
+            <!-- Toggle A -->
+            <div class="flex items-center justify-center w-full">
+              <label for="toogle" class="flex items-center cursor-pointer">
+                <!-- toggle -->
+                <div class="relative">
+                  <!-- input -->
+                  <input id="toogle" type="checkbox" class="sr-only" />
+                  <!-- line -->
+                  <div class="w-10 h-4 bg-gray-400 rounded-full shadow-inner"></div>
+                  <!-- dot -->
+                  <div class="dot absolute w-6 h-6 bg-white rounded-full shadow -left-1 -top-1 transition"></div>
+                </div>
+              </label>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="py-2 flex justify-between items-center">
+          <div class="">
+            <div>人人字幕 token</div>
+            <div class="text-xs text-gray-500 italic">
+              <a href="https://secure.assrt.net/api/doc" class="text-green-600">去申请 token </a>
+            </div>
+          </div>
+          <input placeholder="your token"
+            class="bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4" required="required"
+            type="text" name="" id="assrt-token">
+        </div>
+        <div class="py-2 flex justify-between">
+          <div>开启字幕下载</div>
+          <div>button</div>
+        </div>
+      </div>
+    </div>
+    <div class="block rounded-md my-4 bg-white">2</div>
+    <div class="block rounded-md my-4 bg-white">3</div>
+
+  </div>
+</body>
+<script src="/options/options.js"></script>
+<script src="/libs/jquery-3.6.0.js"></script>
+
+</html>
